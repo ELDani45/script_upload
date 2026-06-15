@@ -1,0 +1,52 @@
+{% extends "layouts/navbar.html" %}
+
+{% load static %}
+
+{% block css_extra %}
+ <link rel="stylesheet" href="">
+{% endblock %}
+
+{% block content %} 
+
+<body>
+    <main>
+        <section>
+            <h2>Subir archivos</h2>
+            <div class="container-up-files">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <!-- <div>
+                        <label for="code-tarea">Código de la tarea</label>
+                        <br>
+                        {{ form.code_homework }}
+                    </div> -->
+                    <br>
+                    <div>
+                        <label for="file">Archivo (pdf o word)</label>
+                        <br>
+                        {{ form.file_homework }}
+                    </div>
+                    <button type="submit">Subir</button>
+                </form>
+
+
+            </div>
+        </section>
+
+        <section>
+            {% if messages %}
+                <div class="messages-container" style="margin-bottom: 20px;">
+                    {% for message in messages %}
+                        <div>
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </section>
+
+
+    </main>
+</body>
+
+{% endblock %}
