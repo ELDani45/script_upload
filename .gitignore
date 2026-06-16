@@ -3,3 +3,4 @@
 __pycache__
 db.sqlite3
 main.py
+laod_credentials.py

@@ -3,23 +3,23 @@
 {% load static %}
 
 {% block css_extra %}
- <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
 {% endblock %}
 
 {% block content %} 
+    <main class="container-form">
+        <div class="container-video-background">
+            <video autoplay muted loop playsinline>
+                <source src="/media/kling_20260616_VIDEO_me_puedes__2610_0.mp4" type="video/mp4">
+                Tu navegador no soporta videos de fondo.
+            </video>
+        </div>
 
-<body>
-    <main>
         <section>
             <h2>Subir archivos</h2>
             <div class="container-up-files">
                 <form method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
-                    <!-- <div>
-                        <label for="code-tarea">Código de la tarea</label>
-                        <br>
-                        {{ form.code_homework }}
-                    </div> -->
                     <br>
                     <div>
                         <label for="file">Archivo (pdf o word)</label>
@@ -28,8 +28,6 @@
                     </div>
                     <button type="submit">Subir</button>
                 </form>
-
-
             </div>
         </section>
 
@@ -44,9 +42,5 @@
                 </div>
             {% endif %}
         </section>
-
-
     </main>
-</body>
-
 {% endblock %}
