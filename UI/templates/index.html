@@ -16,7 +16,7 @@
         </div> -->
 
         <section>
-            <h2>Subir archivos</h2>
+            <h1 class="title">Subir archivos</h1>
             <div class="container-up-files">
                 <form method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
@@ -27,7 +27,7 @@
                         {{ form.file_homework }}
                     </div>
                     <br>
-                    <button type="submit">Subir</button>
+                    <button type="submit" class="botton">Subir</button>
                 </form>
             </div>
         </section>

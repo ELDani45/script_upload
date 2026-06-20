@@ -31,6 +31,7 @@ body{
   width: 180px;            
   overflow: hidden;        
   vertical-align: middle;
+  margin-left: 13px;
 }
 
 .file-homework::file-selector-button {
@@ -42,6 +43,7 @@ body{
   cursor: pointer;
   transition: 0.5s;
   font-weight: 700;
+  box-shadow: inset 1px 10px 17px greenyellow;
 }
 
 .file-homework::file-selector-button:hover{
@@ -49,4 +51,27 @@ body{
     color: black;
     transition: 0.5s;
     font-weight: 700;
+}
+.title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: greenyellow;
+}
+.botton{
+    background-color: greenyellow;
+    color: black;
+    padding: 6px;
+    border-radius: 5px;
+    font-family: 'Franklin Gothic Medium', 
+    'Arial Narrow', Arial, sans-serif;    
+    font-weight: bold;
+    width: 170px;
+    font-size: 19px;
+    margin-left: 13px;
+    transition: 0.8s;
+}
+.botton:hover{
+    background-color: black;
+    color: greenyellow;
+    transition: 0.8s;border: 2px solid greenyellow;
 }
