@@ -68,7 +68,7 @@ async def main(name_file:str, file_path):
 
             print("Como llega el nombre de name_file:\n",name_file)
             list_directions_h = []
-            name_to_search = name_file.split(".")[0].strip()
+            name_to_search = name_file.split("_")[0].strip()
 
             print("Nombre real del archivo a buscar:\n", name_to_search)
 
@@ -77,6 +77,10 @@ async def main(name_file:str, file_path):
                 list_directions_h.append(texto.split(" ")[-1].strip())
 
             name_final = str(name_to_search[:-5]).strip()
+            for letra in name_final:
+                if letra == "_":
+                    name_final = str(name_final).split("_")[0]
+                    name_final = name_final[:-5].strip()
             print("en secciones",name_final)
 
             if name_final in list_directions_h:
